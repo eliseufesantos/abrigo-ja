@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrigo Já - Detalhes do Abrigo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/detalhes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/logo.svg" alt="Abrigo Já Logo" class="logo">
+                </a>
+                <a href="index.html" class="titulo-link">
+                    <h1 class="titulo-principal">Abrigo Já</h1>
+                </a>
+            </div>
+            
+            <nav class="navegacao">
+                <button id="alternarTema" class="alternar-tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <select id="selecionarIdioma" class="seletor-idioma">
+                    <option value="pt-br">Português (BR)</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+                
+                <div class="botoes-autenticacao">
+                    <button id="botaoEntrar" class="botao-autenticacao botao-entrar">Entrar</button>
+                    <button id="botaoCadastrar" class="botao-autenticacao botao-cadastrar">Cadastrar</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <div class="container">
+            <div id="conteudoAbrigo" class="conteudo-abrigo">
+                <!-- O conteúdo será preenchido via JavaScript -->
+            </div>
+
+            <div class="botoes-navegacao">
+                <a href="resultados.html" class="botao-voltar">
+                    <i class="fas fa-arrow-left"></i>
+                    Voltar para a Lista
+                </a>
+                <button id="botaoComoChegar" class="botao-principal">
+                    <i class="fas fa-directions"></i>
+                    Como Chegar
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Login -->
+    <div id="modalLogin" class="modal">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h2>Entrar</h2>
+                <button class="fechar-modal">&times;</button>
+            </div>
+            <form id="formularioLogin" class="formulario-autenticacao">
+                <div class="grupo-formulario">
+                    <label for="emailLogin">E-mail</label>
+                    <input type="email" id="emailLogin" name="email" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="senhaLogin">Senha</label>
+                    <input type="password" id="senhaLogin" name="senha" required>
+                </div>
+                <button type="submit" class="enviar-formulario">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro -->
+    <div id="modalCadastro" class="modal">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h2>Cadastrar</h2>
+                <button class="fechar-modal">&times;</button>
+            </div>
+            <form id="formularioCadastro" class="formulario-autenticacao">
+                <div class="grupo-formulario">
+                    <label for="nomeCadastro">Nome</label>
+                    <input type="text" id="nomeCadastro" name="nome" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="emailCadastro">E-mail</label>
+                    <input type="email" id="emailCadastro" name="email" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="senhaCadastro">Senha</label>
+                    <input type="password" id="senhaCadastro" name="senha" required>
+                </div>
+                <button type="submit" class="enviar-formulario">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2024 Abrigo Já - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/dados.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/detalhes.js"></script>
+</body>
+</html> 

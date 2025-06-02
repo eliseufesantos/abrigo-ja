@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Marcador de localização -->
+  <path d="M120,28
+           C174,28 212,66 212,120
+           C212,186 120,220 120,220
+           C120,220 28,186 28,120
+           C28,66 66,28 120,28Z" fill="#2563eb"/>
+
+  <!-- Casa branca centralizada -->
+  <polygon points="85,130 120,90 155,130 155,170 85,170" fill="#fff"/>
+  <!-- Porta (arco maior) -->
+  <path d="M105,170 Q120,150 135,170" fill="none" stroke="#2563eb" stroke-width="8"/>
+  <!-- Pessoa (cabeça maior) -->
+  <circle cx="120" cy="155" r="13" fill="#2563eb"/>
+  <!-- Corpo da pessoa (arco maior) -->
+  <path d="M108,185 Q120,168 132,185" fill="none" stroke="#2563eb" stroke-width="7"/>
+</svg> 

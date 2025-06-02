@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrigo Já</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/logo.svg" alt="Abrigo Já Logo" class="logo">
+                </a>
+                <a href="index.html" class="titulo-link">
+                    <h1 class="titulo-principal">Abrigo Já</h1>
+                </a>
+            </div>
+            
+            <button id="menuHamburguer" class="menu-hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navegacao" id="menuNavegacao">
+                <div class="menu-opcoes">
+                    <button id="alternarTema" class="alternar-tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <select id="selecionarIdioma" class="seletor-idioma">
+                        <option value="pt-br">Português (BR)</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                    
+                    <div class="botoes-autenticacao">
+                        <button id="botaoEntrar" class="botao-autenticacao botao-entrar">Entrar</button>
+                        <button id="botaoCadastrar" class="botao-autenticacao botao-cadastrar">Cadastrar</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <div class="container">
+            <section class="secao-busca">
+                <div class="campo-busca">
+                    <input type="text" id="localizacao" placeholder="Digite sua localização (cidade, bairro ou CEP)" class="input-busca">
+                    <button class="botao-principal" id="buscarAbrigos">
+                        <i class="fas fa-search"></i>
+                        Buscar Abrigos Próximos
+                    </button>
+                </div>
+            </section>
+
+            <!-- Mapa Interativo dos Abrigos -->
+            <section class="secao-mapa">
+                <div id="mapa-abrigos" style="width: 100%; height: 350px; border-radius: 12px; margin: 2rem 0;"></div>
+            </section>
+
+            <section class="secao-info">
+                <h2>Como Funciona</h2>
+                <div class="cards-info">
+                    <div class="card-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Localize</h3>
+                        <p>Encontre abrigos próximos à sua localização</p>
+                    </div>
+                    <div class="card-info">
+                        <i class="fas fa-bed"></i>
+                        <h3>Vagas</h3>
+                        <p>Verifique a disponibilidade de vagas</p>
+                    </div>
+                    <div class="card-info">
+                        <i class="fas fa-phone"></i>
+                        <h3>Contato</h3>
+                        <p>Entre em contato com o abrigo</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal de Login -->
+    <div id="modalLogin" class="modal">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h2>Entrar</h2>
+                <button class="fechar-modal">&times;</button>
+            </div>
+            <form id="formularioLogin" class="formulario-autenticacao">
+                <div class="grupo-formulario">
+                    <label for="emailLogin">E-mail</label>
+                    <input type="email" id="emailLogin" name="email" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="senhaLogin">Senha</label>
+                    <input type="password" id="senhaLogin" name="senha" required>
+                </div>
+                <button type="submit" class="enviar-formulario">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro -->
+    <div id="modalCadastro" class="modal">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h2>Cadastrar</h2>
+                <button class="fechar-modal">&times;</button>
+            </div>
+            <form id="formularioCadastro" class="formulario-autenticacao">
+                <div class="grupo-formulario">
+                    <label for="nomeCadastro">Nome</label>
+                    <input type="text" id="nomeCadastro" name="nome" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="emailCadastro">E-mail</label>
+                    <input type="email" id="emailCadastro" name="email" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="senhaCadastro">Senha</label>
+                    <input type="password" id="senhaCadastro" name="senha" required>
+                </div>
+                <button type="submit" class="enviar-formulario">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2024 Abrigo Já - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/dados.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mapa.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_AQUI&callback=inicializarMapa"></script>
+</body>
+</html>
