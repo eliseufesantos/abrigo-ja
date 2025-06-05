@@ -35,7 +35,7 @@ body {
 .cabecalho {
     background-color: var(--cor-primaria);
     color: var(--cor-branca);
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     position: relative;
 }
 
@@ -48,16 +48,16 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .logo {
-    height: 40px;
+    height: 50px;
     width: auto;
 }
 
 .titulo-principal {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin: 0;
 }
 
@@ -106,26 +106,27 @@ body {
 .navegacao {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .menu-opcoes {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .botoes-autenticacao {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .botao-autenticacao {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: 500;
+    font-size: 1.1rem;
     transition: background-color 0.3s ease;
 }
 
@@ -145,16 +146,17 @@ body {
     border: none;
     color: var(--cor-branca);
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .seletor-idioma {
-    padding: 0.5rem;
-    border-radius: 4px;
+    padding: 0.75rem;
+    border-radius: 8px;
     border: 1px solid var(--cor-branca);
     background-color: transparent;
     color: var(--cor-branca);
     cursor: pointer;
+    font-size: 1.1rem;
 }
 
 .seletor-idioma option {
@@ -261,9 +263,10 @@ body {
 .rodape {
     background-color: var(--cor-primaria);
     color: var(--cor-branca);
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    font-size: 1.1rem;
 }
 
 /* Media Queries */
@@ -298,7 +301,7 @@ body {
         max-width: 300px;
         height: 100vh;
         background-color: var(--cor-primaria);
-        padding: 5rem 2rem 2rem;
+        padding: 6rem 2rem 2rem;
         transition: right 0.3s ease;
         z-index: 999;
     }
@@ -310,16 +313,18 @@ body {
     .menu-opcoes {
         flex-direction: column;
         align-items: stretch;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .botoes-autenticacao {
         flex-direction: column;
+        gap: 1rem;
     }
 
     .botao-autenticacao {
         width: 100%;
-        padding: 0.75rem;
+        padding: 1rem;
+        font-size: 1.2rem;
     }
 
     .menu-hamburguer.ativo span:nth-child(1) {
@@ -402,6 +407,37 @@ body {
     }
     
     .card-info p {
+        font-size: 1.2rem;
+    }
+    
+    .cabecalho {
+        padding: 2rem 0;
+    }
+    
+    .logo {
+        height: 60px;
+    }
+    
+    .titulo-principal {
+        font-size: 2rem;
+    }
+    
+    .botao-autenticacao {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+    
+    .alternar-tema {
+        font-size: 1.6rem;
+    }
+    
+    .seletor-idioma {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .rodape {
+        padding: 2.5rem 0;
         font-size: 1.2rem;
     }
 }
