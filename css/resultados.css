@@ -1,34 +1,34 @@
 /* Seção de Filtros */
 .secao-filtros {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .filtros {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
 .filtro {
-    padding: 0.75rem;
+    padding: 1rem;
     border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 1rem;
-    min-width: 200px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    min-width: 250px;
     background-color: var(--cor-branca);
 }
 
 /* Lista de Abrigos */
 .lista-abrigos {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
     grid-template-columns: 1fr;
 }
 
 .card-abrigo {
     background-color: var(--cor-branca);
-    border-radius: 12px;
-    padding: 1.5rem;
+    border-radius: 16px;
+    padding: 2rem;
     box-shadow: var(--sombra-suave);
     transition: transform 0.3s ease;
 }
@@ -39,38 +39,40 @@
 
 .card-abrigo h3 {
     color: var(--cor-primaria);
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .info-abrigo {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 .info-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
     color: var(--cor-texto);
+    font-size: 1.1rem;
 }
 
 .info-item i {
     color: var(--cor-secundaria);
-    width: 20px;
+    width: 24px;
+    font-size: 1.2rem;
 }
 
 .botao-detalhes {
     background-color: var(--cor-primaria);
     color: var(--cor-branca);
     border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
@@ -86,8 +88,26 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .lista-abrigos {
         grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .card-abrigo {
+        padding: 2.5rem;
+    }
+    
+    .card-abrigo h3 {
+        font-size: 1.75rem;
+    }
+    
+    .info-item {
+        font-size: 1.2rem;
+    }
+    
+    .botao-detalhes {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.2rem;
     }
 } 
