@@ -21,20 +21,28 @@
                 </a>
             </div>
             
-            <nav class="navegacao">
-                <button id="alternarTema" class="alternar-tema">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <select id="selecionarIdioma" class="seletor-idioma">
-                    <option value="pt-br">Português (BR)</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                </select>
-                
-                <div class="botoes-autenticacao">
-                    <button id="botaoEntrar" class="botao-autenticacao botao-entrar">Entrar</button>
-                    <button id="botaoCadastrar" class="botao-autenticacao botao-cadastrar">Cadastrar</button>
+            <button id="menuHamburguer" class="menu-hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navegacao" id="menuNavegacao">
+                <div class="menu-opcoes">
+                    <button id="alternarTema" class="alternar-tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <select id="selecionarIdioma" class="seletor-idioma">
+                        <option value="pt-br">Português (BR)</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                    
+                    <div class="botoes-autenticacao">
+                        <button id="botaoEntrar" class="botao-autenticacao botao-entrar">Entrar</button>
+                        <button id="botaoCadastrar" class="botao-autenticacao botao-cadastrar">Cadastrar</button>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -43,6 +51,9 @@
     <main class="conteudo-principal">
         <div class="container">
             <section class="secao-filtros">
+                <a href="#" class="botao-voltar-topo-discreto" onclick="window.location.href = 'index.html'; return false;">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
                 <div class="filtros">
                     <select id="filtroTipo" class="filtro">
                         <option value="">Tipo de Abrigo</option>
@@ -121,5 +132,6 @@
     <script src="js/dados.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/resultados.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html> 

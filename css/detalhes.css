@@ -186,6 +186,29 @@
     }
 }
 
+@media (max-width: 767px) {
+    /* Ajustes para botões de navegação no mobile */
+    .botoes-navegacao {
+        flex-direction: row;
+        justify-content: space-around; /* Distribui o espaço entre os botões */
+        gap: 1rem; /* Espaçamento menor entre botões no mobile */
+        flex-wrap: wrap; /* Permite quebra de linha se não houver espaço */
+    }
+
+    .botoes-navegacao .botao-voltar,
+    .botoes-navegacao .botao-principal {
+        flex: 1 1 auto; /* Permite que os botões cresçam e encolham, compartilhando o espaço */
+        padding: 0.8rem 1.2rem; /* Diminuir padding */
+        font-size: 1rem; /* Diminuir tamanho da fonte */
+        text-align: center; /* Centralizar texto */
+        justify-content: center; /* Centralizar conteúdo flex (ícone e texto) */
+    }
+
+    .info-item {
+        padding: 1rem;
+    }
+}
+
 .grid-detalhes {
     display: grid;
     grid-template-columns: 1fr 1fr;

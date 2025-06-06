@@ -1,12 +1,18 @@
 /* Seção de Filtros */
 .secao-filtros {
     margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .filtros {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .filtro {
@@ -16,6 +22,13 @@
     font-size: 1.1rem;
     min-width: 250px;
     background-color: var(--cor-branca);
+    flex: 0 0 auto;
+}
+
+/* Estilo específico para o botão voltar dentro da seção de filtros */
+.secao-filtros .botao-voltar-topo-discreto {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Lista de Abrigos */
@@ -109,5 +122,38 @@
     .botao-detalhes {
         padding: 1.25rem 2.5rem;
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Mobile - Ajustes para garantir que botão e filtros fiquem lado a lado */
+    .secao-filtros {
+        gap: 0.8rem; /* Espaçamento entre o botão e o bloco de filtros */
+        justify-content: flex-start; /* Alinhar ao início */
+        flex-wrap: wrap; /* Permitir quebra (se necessário, mas menos provável com os ajustes abaixo) */
+    }
+    .filtros {
+        flex-direction: row;
+        gap: 0.8rem; /* Espaçamento entre os filtros */
+        justify-content: space-between; /* Distribuir espaço entre os filtros */
+        flex-grow: 1; /* Permite que o bloco de filtros cresça */
+        flex-shrink: 1; /* Permite que o bloco de filtros encolha */
+        flex-basis: 0; /* Permite que o bloco de filtros encolha abaixo do seu tamanho de conteúdo */
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+    }
+
+    .filtro {
+        min-width: unset; /* Remover min-width */
+        flex: 1 1 auto; /* Permite que os filtros compartilhem o espaço e encolham */
+        padding: 0.6rem; /* Reduzir um pouco o padding no mobile */
+        font-size: 0.9rem; /* Reduzir um pouco o tamanho da fonte no mobile */
+    }
+
+    .secao-filtros .botao-voltar-topo-discreto {
+        margin-top: 0;
+        margin-bottom: 0;
+        flex-shrink: 0; /* Impedir que o botão encolha */
     }
 } 
